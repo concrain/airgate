@@ -77,7 +77,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -87,3 +87,28 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+//define( 'WPMS_ON', true );
+//define( 'WPMS_SMTP_PASS', 'your_password' );
+
+/**
+ * Setting options in wp-config.php
+ *
+ * Specifically aimed at WPMU users, you can set the options for this plugin as
+ * constants in wp-config.php. This disables the plugin's admin page and may
+ * improve performance very slightly. Copy the code below into wp-config.php.
+ */
+
+
+define('WPMS_ON', true);
+define('WPMS_MAIL_FROM', 'contact_us@airgate.io');
+define('WPMS_MAIL_FROM_NAME', 'AirGate');
+define('WPMS_MAILER', 'smtp'); // Possible values 'smtp', 'mail', or 'sendmail'
+define('WPMS_SET_RETURN_PATH', 'true'); // Sets $phpmailer->Sender if true
+define('WPMS_SMTP_HOST', 'mail.gandi.net'); // The SMTP mail host
+define('WPMS_SMTP_PORT', 465); // The SMTP server port number
+define('WPMS_SSL', 'ssl'); // Possible values '', 'ssl', 'tls' - note TLS is not STARTTLS
+define('WPMS_SMTP_AUTH', true); // True turns on SMTP authentication, false turns it off
+define('WPMS_SMTP_USER', 'contact_us@airgate.io'); // SMTP authentication username, only used if WPMS_SMTP_AUTH is true
+define('WPMS_SMTP_PASS', 'F$0ciety'); // SMTP authentication password, only used if WPMS_SMTP_AUTH is true
+

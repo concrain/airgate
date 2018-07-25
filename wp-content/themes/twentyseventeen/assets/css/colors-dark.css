@@ -473,10 +473,14 @@ body.colors-dark,
 .colors-dark .widget .widget-title a,
 .colors-dark .widget ul li a,
 .colors-dark .site-footer .widget-area ul li a,
-.colors-dark .site-info a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 1); /* Equivalant to #222 */
-	box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 1); /* Equivalant to #222 */
+.colors-dark .site-info {
+  width: 50%;
+  margin: 0 auto;
 }
+/*.colors-dark .site-info a {
+	-webkit-box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 1); 
+	box-shadow: inset 0 -1px 0 rgba(34, 34, 34, 1); 
+}*/
 
 /* Fixes linked images */
 .colors-dark .entry-content a img,
