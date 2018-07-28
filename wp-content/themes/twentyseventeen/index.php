@@ -23,12 +23,9 @@ get_header(); ?>
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
 		</header>
 	<?php else : ?>
-		
 	<header class="page-header">
 		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	</header>
-
 	<?php endif; ?>
 
 	<div id="primary" class="content-area">

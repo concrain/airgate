@@ -584,36 +584,3 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
-
-/**
- * Add SVG capabilities
- */
-function wpcontent_svg_mime_type( $mimes = array() ) {
-  $mimes['svg']  = 'image/svg+xml';
-  $mimes['svgz'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter( 'upload_mimes', 'wpcontent_svg_mime_type' );
-
-/**
- * CUSTOM ADDITIONS
- */
-function enqueue_our_required_stylesheets(){
-	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
-}
-// enqueues our external font awesome stylesheet
-add_action('wp_enqueue_scripts','enqueue_our_required_stylesheets');
-
-/**
- * Enqueue required scripts.
- */
-add_action( 'wp_enqueue_scripts', function() {
-	
-	wp_enqueue_style( 'parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
-	wp_enqueue_script( 'smootstate-js', 
-			'https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js', 
-			array( 'jquery' ), 
-			'0.7.2' );
-	wp_enqueue_script( 'script-js', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/script.min.js' , array( 'jquery', 'smootstate-js' ), '1.0.0', true );
-	
-} );

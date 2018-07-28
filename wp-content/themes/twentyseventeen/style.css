@@ -479,8 +479,8 @@ h5 {
 	font-size: 0.8125rem;
 	font-weight: 800;
 	letter-spacing: 0.15em;
-/*	text-transform: uppercase;
-*/}
+	text-transform: uppercase;
+}
 
 h6 {
 	color: #333;
@@ -1314,13 +1314,12 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
+	background: #fff;
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	font-size: 16px;
 	font-size: 1rem;
 	position: relative;
-	width: 50%;
-    margin: 0 auto;
 }
 
 .navigation-top .wrap {
@@ -1346,6 +1345,7 @@ a:hover .nav-title,
 }
 
 .main-navigation ul {
+	background: #fff;
 	list-style: none;
 	margin: 0;
 	padding: 0 1.5em;
@@ -3957,9 +3957,8 @@ p > object:only-child {
 	.page.page-one-column .entry-header,
 	.twentyseventeen-front-page.page-one-column .entry-header,
 	.archive.page-one-column:not(.has-sidebar) .page-header {
-/*		margin-bottom: 4em;  */
-		display: none;
- 	}
+		margin-bottom: 4em;
+	}
 
 	.page:not(.home) #content {
 		padding-bottom: 3.25em;
@@ -4053,14 +4052,9 @@ p > object:only-child {
 		width: 58%;
 	}
 
-	.center-info {
-		width: 50%;
-  		margin: 0 auto;
-	}
-
 	.social-navigation + .site-info {
-/*		margin-left: 6%;
-*/	}
+		margin-left: 6%;
+	}
 
 	.site-info .sep {
 		margin: 0 0.5em;
@@ -4103,8 +4097,7 @@ p > object:only-child {
 	}
 
 	.navigation-top nav {
-		width: 50%;
-  		margin: 0 auto;
+		margin-left: 0;
 	}
 
 	/* Sticky posts */
