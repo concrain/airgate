@@ -1,0 +1,26 @@
+
+# sftp access to airgate server
+ex.. sftp -oPort=custom_port <user>@y<server>:<directory>
+
+    sftp -oPort=22 582311:79vettee@ysftp.sd5.gpaas.net:/vhosts/www.airgate.io/
+
+
+# git acess to airgate server
+	git remote add gandi git+ssh://582311@git.sd5.gpaas.net/www.airgate.io.git
+	git push gandi master
+	ssh 582311@git.sd5.gpaas.net deploy www.airgate.io.git
+
+# user = 582311
+# pass = 79vettee
+
+# user name = concrain
+# domain pass = HeartStr0ng!
+
+# ssh console
+ssh 582311@console.sd5.gpaas.net.
+pass: 79vettee
+
+## YOU NEED TO DEPLOY TO SEE THE FILES
+git: 	/srv/data/web/vhosts/www.airgate.io
+htdocs:	/srv/data/web/vhosts/www.airgate.io/htdocs
+
