@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- COPYRIGHT 2018 @AirGate.io -------------------------------------------------------------- -->
+  <title>AirGate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel='stylesheet'  type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=" rel='stylesheet'  type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=" rel='stylesheet'  type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+    }
+    h1 {
+        font-weight: bolder !important;
+        font-family: Montserrat;
+        letter-spacing: 5px;
+    }
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #4d4d4f
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #4d4d4f
+        font-weight: 400;
+        margin-bottom: 30px;
+    }  
+    .jumbotron {
+        background-color: #f4511e;
+        color: #fff;
+        font-family: Montserrat, sans-serif;
+        padding-left: 40px;  
+        padding-right: 40px;
+    }
+    .col-sm-8 {
+/*        padding-left: 80px;*/
+/*        padding-right: 80px;*/
+
+      }
+    .col-sm-4 {
+        padding-left: 40px;
+    }
+    .container-fluid {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+    
+    
+/*
+    @font-face {
+        font-family: OpenSans, Tachyon;
+        font-style: normal;
+        font-weight: 400;
+        src: local('Open Sans'), local('OpenSans'), url("//themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff") format('woff');
+    }
+*/
+    
+    /*-- LOGO'S --------------------------------------------------------------*/
+    .logo-brand {
+        float: right;
+    }
+    .img-fluid {
+        float: right;
+    }
+    .logo-small {
+        color: #f4511e;
+        font-size: 50px;
+    }
+    .logo {
+        margin-top: 50px;
+        color: #f4511e;
+        font-size: 185px;
+    }
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    .input-group {
+      max-width: 400px;
+    }
+    
+    
+    .carousel-control.right, .carousel-control.left {
+        background-image: none;
+        color: #f4511e;
+    }
+    .carousel-indicators li {
+        border-color: #f4511e;
+    }
+    .carousel-indicators li.active {
+        background-color: #f4511e;
+    }
+    .item h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+    }
+    .item span {
+        font-style: normal;
+    }
+    .panel {
+        border: 1px solid #f4511e; 
+        border-radius:0 !important;
+        transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+    .panel-footer .btn:hover {
+        border: 1px solid #f4511e;
+        background-color: #fff !important;
+        color: #f4511e;
+    }
+    .panel-heading {
+        color: #fff !important;
+        background-color: #f4511e !important;
+        padding: 25px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .panel-footer {
+        background-color: white !important;
+    }
+    .panel-footer h3 {
+        font-size: 32px;
+    }
+    .panel-footer h4 {
+        color: #aaa;
+        font-size: 14px;
+    }
+    .panel-footer .btn {
+        margin: 15px 0;
+        background-color: #f4511e;
+        color: #fff;
+    }
+    
+    /*-- NAVIGATION --------------------------------------------------------------*/
+    .navbar {
+        margin-bottom: 0;
+        background-color: #f4511e;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+    }
+    .subscribe {
+      max-width="400px !important
+    }
+    
+    
+    .footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+    }
+    
+    .glyphicon-chevron-up {
+      color: #f4511e;
+    }
+    .btn-default {
+      color: #818181 !important;
+    }
+    
+    
+    /*-- FLEX --------------------------------------------------------------*/
+    .slideanim {visibility:hidden;}
+    .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    
+    /* -- <768px ------------ */
+    @media screen and (max-width: 768px) {
+/*
+      .container-fluid {
+        text-align: center !important;
+      }
+*/
+      .col-sm-4 {
+        text-align: center !important;
+        margin: 25px 0;
+      }
+      .col-sm-8 {
+        text-align: center !important;
+        margin: 25px 0;
+      }
+      .btn-lg {
+          width: 100%;
+          margin-bottom: 35px;
+      }
+    }
+    
+    /* -- <480px ------------ */
+    @media screen and (max-width: 480px) {
+      .logo {
+          font-size: 150px;
+      }
+      .col-sm-4 {
+        text-align: center !important;
+      }
+      .col-sm-8 {
+        text-align: center !important;
+      }
+      .jumbotron {
+        padding-right: 0px !important;
+      }
+      .container-fluid {
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+      .img-fluid {
+        float: right;
+        padding-right: 10px;
+      }
+      .subscribe {
+        max-width="200px !important
+      }
+      .body {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+  
+<body id="index" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#index"><i class="glyphicon glyphicon-map-marker"></i></a>  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-left">
+  <div>
+    <a class="img-fluid"><img src="media/airgate-logo-small-white.png"></a>
+    <h1>AirGate</h1>
+  </div>
+  <form method="POST" action="https://formspree.io/subscribe@airgate.io" class="subscribe">
+    <div class="input-group">
+      <input type="email" name="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -------------------------------------------------------------- -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>The Advantages of AirGate</h2>
+      <br>
+      <p>We upgrade security by offering free keyless entry ensuring only property owners have a key to their property, this ensures that guests have access only for the nights they’re booked to stay. Because these units are used for multiple short-term stays, they recieve lower wear and tear than a full time renter. Airgate helps preserve the property values and is fully insured for all damages.</p>
+      <p>Secondly, after every guest, your property is cleaned to the highest standards by our professional cleaning company.</p> 
+      <p>Finally, we can provide references upon request.</p>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo slideanim"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Clientele</h2>
+      <br>
+      <p>Generally our guest consist out of state business travelers who are seeking something with a better price point than a hotel.</p> 
+      <p>Our members are prescreened for identification, are pet free, non-smokers, who typically stay for 1-3 nights. All members must submit a profile photo and verify their identity, phone & email. Guests and hosts each publish reviews after check out keeping everyone accountable and respectful.</p>
+    </div>
+  </div>
+</div>
+  
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>How we Compare to a Typical Renter</h2>
+      <br>
+      <p><strong> DAILY / WEEKLY PROFESSIONAL CLEANINGS.  A THROUGH CLEANING OF THE PROPERTY WILL BE PERFORMED AFTER EACH GUEST</strong></p>
+      <p><strong> PET FREE AND SMOKE FREE</strong></p>
+      <p><strong> LOWER WATER USE THAN A FULL TIME RENTER</strong></p>
+      <p><strong> LOWER WEAR AND TEAR ON THE PROPERTY THAN A FULL TIME RENTER</strong></p>
+      <p><strong> AUTOMATIC MONTHLY RENTAL PAYMENTS</strong></p>
+      <p><strong> EACH PROPERTY IS FULLY INSURED FOR DAMAGE AND LIABILITY</strong></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-transfer logo slideanim"></span>
+    </div>
+  </div>
+</div>
+  
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-piggy-bank logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Pricing</h2>
+      <br>
+      <p>There are no fees, charges or hidden costs whatsoever for allowing AirGate to lease your property. </p> 
+      <p>We sign a 6 or 12 month lease and provide a deposit.</p>
+      <p>In the rare event of accidental damage, the property is covered up to a million dollars. It’s peace of mind at no extra charge</p>
+    </div>
+  </div>
+</div>
+  
+<!-- Container (Services Section) -------------------------------------------------------------- -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Lower water consumption and less wear and tear on your properties</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4>INSURED</h4>
+      <p>All properties are fully insured for damage and liability</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>VERIFIED</h4>
+      <p>All guests are prescreened for identification</p>
+    </div>
+  </div>
+</div>
+  
+<!-- Container (Contact Section) -------------------------------------------------------------- -->
+<form id="contact" class="container-fluid bg-grey" method="POST" action="https://formspree.io/contact_us@airgate.io">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>We look forward to working with you and developing a mutually beneficial relationship</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> California, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1 650 695-7637</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> contact_us@airgate.io</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<footer class="container-fluid text-center">
+  <a href="#index" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>COPYRIGHT 2018 @AirGate.io</p>
+  <p>1484 Pollard Rd Suite 374 Los Gatos, CA 95032</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#index'], a[href='#contact']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
