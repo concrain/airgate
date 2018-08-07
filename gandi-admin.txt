@@ -1,9 +1,15 @@
 
+=========================
+GIT
+=========================
+
 # sftp access to airgate server
 ex.. sftp -oPort=custom_port <user>@y<server>:<directory>
 
-    sftp -oPort=22 582311:79vettee@ysftp.sd5.gpaas.net:/vhosts/www.airgate.io/
-
+    sftp 582311@sftp.sd5.gpaas.net
+    cd vhosts/www.airgate.io/htdocs/
+    mkdir wp-content
+    mput -r wp-content
 
 # git acess to airgate server
 	git remote add gandi git+ssh://582311@git.sd5.gpaas.net/www.airgate.io.git
@@ -17,10 +23,35 @@ ex.. sftp -oPort=custom_port <user>@y<server>:<directory>
 # domain pass = HeartStr0ng!
 
 # ssh console
-ssh 582311@console.sd5.gpaas.net.
+ssh 582311@console.sd5.gpaas.net:/srv/data/web/vhosts/www.airgate.io/htdocs
+ssh 582311@console.sd5.gpaas.net
+
 pass: 79vettee
 
 ## YOU NEED TO DEPLOY TO SEE THE FILES
 git: 	/srv/data/web/vhosts/www.airgate.io
 htdocs:	/srv/data/web/vhosts/www.airgate.io/htdocs
+
+
+
+============================
+EMAIL
+============================
+https://doc.gandi.net/en/mail/faq/standard-settings
+
+SMTP:
+  Outgoing (SMTP) server name : mail.gandi.net
+  Port :465 (with SSL)
+  TLS or SSL : yes
+  SMTP Authentication : yes
+  Username: russelarthur@airgate.io
+  Password: HeartStr0ng!
+
+
+============================
+LOGS
+============================
+/lamp0/var/log
+
+
 

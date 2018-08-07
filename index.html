@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel='stylesheet'  type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=" rel='stylesheet'  type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=" rel='stylesheet'  type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -50,11 +48,11 @@
 
       }
     .col-sm-4 {
-        padding-left: 40px;
+/*        padding-left: 40px;*/
     }
     .container-fluid {
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-top: 40px;
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -73,9 +71,6 @@
 */
     
     /*-- LOGO'S --------------------------------------------------------------*/
-    .logo-brand {
-        float: right;
-    }
     .img-fluid {
         float: right;
     }
@@ -84,7 +79,7 @@
         font-size: 50px;
     }
     .logo {
-        margin-top: 50px;
+/*        margin-top: 50px;*/
         color: #f4511e;
         font-size: 185px;
     }
@@ -100,6 +95,15 @@
     }
     .input-group {
       max-width: 400px;
+    }
+    
+    
+    /*-- GLYPHICONS --------------------------------------------------------------*/
+    .glyphicon-signal, .glyphicon-globe, .glyphicon-transfer, .glyphicon-piggy-bank {
+      height: inherit;
+      line-height: inherit;
+      text-align: center;
+      padding-left: 50px;
     }
     
     
@@ -146,21 +150,7 @@
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
-    .panel-footer {
-        background-color: white !important;
-    }
-    .panel-footer h3 {
-        font-size: 32px;
-    }
-    .panel-footer h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
-    .panel-footer .btn {
-        margin: 15px 0;
-        background-color: #f4511e;
-        color: #fff;
-    }
+    
     
     /*-- NAVIGATION --------------------------------------------------------------*/
     .navbar {
@@ -190,17 +180,32 @@
     }
     
     
+    /*-- FOOTER --------------------------------------------------------------*/
     .footer .glyphicon {
         font-size: 20px;
         margin-bottom: 20px;
         color: #f4511e;
     }
-    
     .glyphicon-chevron-up {
       color: #f4511e;
     }
     .btn-default {
       color: #818181 !important;
+    }
+        .panel-footer {
+        background-color: white !important;
+    }
+    .panel-footer h3 {
+        font-size: 32px;
+    }
+    .panel-footer h4 {
+        color: #aaa;
+        font-size: 14px;
+    }
+    .panel-footer .btn {
+        margin: 15px 0;
+        background-color: #f4511e;
+        color: #fff;
     }
     
     
@@ -236,29 +241,37 @@
     
     /* -- <768px ------------ */
     @media screen and (max-width: 768px) {
-/*
-      .container-fluid {
-        text-align: center !important;
-      }
-*/
       .col-sm-4 {
         text-align: center !important;
-        margin: 25px 0;
       }
       .col-sm-8 {
         text-align: center !important;
-        margin: 25px 0;
+      }
+      .container-fluid {
+        padding-bottom: 20px !important;
+        padding-top: 20px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
       }
       .btn-lg {
           width: 100%;
           margin-bottom: 35px;
+      }
+      .glyphicon-signal, .glyphicon-globe, .glyphicon-transfer, .glyphicon-piggy-bank {
+        height: inherit;
+        line-height: inherit;
+        text-align: center;
+        padding-left: 0px !important;
+      }
+      .services {
+        margin-bottom: 10px !important;
       }
     }
     
     /* -- <480px ------------ */
     @media screen and (max-width: 480px) {
       .logo {
-          font-size: 150px;
+          font-size: 100px !important;
       }
       .col-sm-4 {
         text-align: center !important;
@@ -276,14 +289,22 @@
         padding-right: 10px !important;
       }
       .img-fluid {
+        max-height: 75% !important;
+        max-width: 75% !important;
         float: right;
         padding-right: 10px;
       }
       .subscribe {
-        max-width="200px !important
+        max-width: 250px !important;
       }
-      .body {
-        width: 100% !important;
+      .glyphicon-signal, .glyphicon-globe, .glyphicon-transfer, .glyphicon-piggy-bank {
+        height: inherit;
+        line-height: inherit;
+        text-align: center;
+        padding-left: 0px !important;
+      }
+      .services {
+        margin-bottom: 0px !important;
       }
     }
   </style>
@@ -392,7 +413,7 @@
   
 <!-- Container (Services Section) -------------------------------------------------------------- -->
 <div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
+  <h2 class="services">SERVICES</h2>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
