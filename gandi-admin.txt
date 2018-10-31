@@ -11,7 +11,7 @@ ex.. sftp -oPort=custom_port <user>@y<server>:<directory>
     mkdir wp-content
     mput -r wp-content
 
-# git acess to airgate server
+# git access to airgate server
 	git remote add gandi git+ssh://582311@git.sd5.gpaas.net/www.airgate.io.git
 	git push gandi master
 	ssh 582311@git.sd5.gpaas.net deploy www.airgate.io.git
